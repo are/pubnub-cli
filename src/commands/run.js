@@ -1,9 +1,15 @@
+const util = require('util')
+
 function decorateHandler(handler, ctx) {
     return async argv => {
         try {
             const result = await handler({ argv, ...ctx })
 
-            ctx.logger.log(result)
+            if (process.stdout.isTTY) {
+                console.log(util.inspect(result, { depth: Infinity }))
+            } else {
+                console.log(JSON.stringify(result))
+            }
         } catch (e) {
             ctx.logger.error(e)
         }
