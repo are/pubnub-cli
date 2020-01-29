@@ -1,6 +1,6 @@
 const uuid = require('uuid/v4')
 
-module.exports = async ({ pubnub, logger, argv }) => {
+module.exports = async ({ pubnub, argv }) => {
     const response = await pubnub.createUser({
         id: argv.id || uuid(),
         name: argv.name || 'default name',
