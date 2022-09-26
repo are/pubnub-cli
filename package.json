@@ -12,7 +12,7 @@
         "dotenv": "8.2.0",
         "fs-extra": "8.1.0",
         "prettier": "^1.19.1",
-        "pubnub": "4.27.3",
+        "pubnub": "4.37.0",
         "signale": "^1.4.0",
         "uuid": "3.4.0",
         "yargs": "15.1.0"
